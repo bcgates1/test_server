@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Web Page Example</title>
+  <title>Web Page with Button</title>
 </head>
 <body>
-    <h1>Web Page Example</h1>
-    <p>Click the button to show a Snackbar in the Flutter app:</p>
-    <button onclick="showSnackbar()">Show Snackbar</button>
+  <h1>Web Page with Button</h1>
+  <button id="myButton">Press Me</button>
 
-    <script>
-        function showSnackbar() {
-            window.flutter_inappwebview.callHandler('showSnackbar', 'Button Pressed');
-        }
-    </script>
+  <script>
+    document.getElementById("myButton").addEventListener("click", function() {
+      window.location.href = "app://buttonPressed";
+    });
+  </script>
 </body>
 </html>
